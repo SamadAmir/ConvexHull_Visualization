@@ -17,7 +17,7 @@ public class HelloApplication extends Application {
         BorderPane root = loader.load();
 
         GrahamScan controller = loader.getController();
-        controller.initialize(); // Call initialize explicitly.
+        controller.initialize(); 
 
         Scene scene = new Scene(root, 900, 700);
 
