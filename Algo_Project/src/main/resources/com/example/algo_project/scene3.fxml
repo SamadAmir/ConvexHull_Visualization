@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?> <!-- Add this import -->
+
+<?import javafx.scene.layout.VBox?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.algo_project.GrahamScan"
+            style="-fx-background-color: #2B2B2B;">
+
+    <!-- Center canvas for drawing points -->
+    <center>
+        <Canvas fx:id="canvas" width="800" height="600" onMouseClicked="#onCanvasMouseClicked"
+                style="-fx-border-color: #4C4C4C; -fx-border-width: 2px;"/>
+    </center>
+
+    <!-- A VBox for the bottom region -->
+    <bottom>
+        <VBox alignment="CENTER" spacing="10">
+            <Button text="Compute Convex Hull" onAction="#onComputeHullButtonClicked"
+                    style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px;"/>
+            <Label fx:id="coordinateLabel" style="-fx-text-fill: white; -fx-font-size: 12px;"/>
+            <TextArea fx:id="resultTextArea" editable="false" prefWidth="200" prefHeight="200"
+                      style="-fx-control-inner-background: #2B2B2B; -fx-text-fill: white;"/>
+        </VBox>
+    </bottom>
+</BorderPane>
